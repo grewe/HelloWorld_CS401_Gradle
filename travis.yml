@@ -6,4 +6,4 @@ before_script:
 
 
 script:
-  java HelloWorld_CS401_Gradle
+  gradlew build
