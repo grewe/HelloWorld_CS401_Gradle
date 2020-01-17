@@ -7,3 +7,4 @@ before_script:
 
 script:
   gradle build
+  java ./src/main/java/HelloWorld_CS401_Gradle.java
