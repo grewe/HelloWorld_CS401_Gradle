@@ -1,0 +1,9 @@
+language: java
+jdk: oraclejdk13
+
+before_script:
+
+
+
+script:
+  java HelloWorld_CS401_Gradle
