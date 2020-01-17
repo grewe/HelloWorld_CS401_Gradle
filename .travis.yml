@@ -1,5 +1,5 @@
 language: java
-jdk: oraclejdk11
+jdk: oraclejdk12
 
 before_script:
   - chmod +x gradlew
