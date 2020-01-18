@@ -6,6 +6,5 @@ before_script:
 
 
 script:
-  gradle build
   gradle check
 
