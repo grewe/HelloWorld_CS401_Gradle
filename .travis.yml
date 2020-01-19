@@ -5,7 +5,7 @@ before_script:
   - chmod +x gradlew
 
 before_install:
-  - sudo apt-get install mpack
+  - sudo apt-get install ssmtp
 
 
 script:
@@ -13,4 +13,4 @@ script:
 
 after_failure:
   cat /home/travis/build/grewe/HelloWorld_CS401_Gradle/build/reports/tests/test/index.html &&
-  mpack -s "Travis Ci Testing Report Failure HelloWorld_CS401" /home/travis/build/grewe/HelloWorld_CS401_Gradle/build/reports/tests/test/index.html lynne.grewe@csueastbay.edu
+  sendmail -s "Travis Ci Testing Report Failure HelloWorld_CS401" lynne.grewe@csueastbay.edu < /home/travis/build/grewe/HelloWorld_CS401_Gradle/build/reports/tests/test/index.html
