@@ -4,8 +4,9 @@ jdk: oraclejdk11
 before_script:
   - chmod +x gradlew
 
-install:
-  install mpack
+before_install:
+  - sudo apt-get install mpack
+
 
 script:
   gradle build && gradle check  && echo 'hello'
