@@ -13,4 +13,4 @@ script:
 
 after_failure:
   cat /home/travis/build/grewe/HelloWorld_CS401_Gradle/build/reports/tests/test/index.html &&
-  mpack -s "Travis Ci Testing Report Failure HelloWorld_CS401"   /home/travis/build/grewe/HelloWorld_CS401_Gradle/build/reports/tests/test/index.html lynne.grewe@csueatbay.edu
+  mpack -s "Travis Ci Testing Report Failure HelloWorld_CS401" -d  /home/travis/build/grewe/HelloWorld_CS401_Gradle/build/reports/tests/test/index.html lynne.grewe@csueatbay.edu
