@@ -5,7 +5,7 @@ before_script:
   - chmod +x gradlew
 
 before_install:
-  - sudo apt-get install ssmtp
+  - sudo apt-get install sendmail
 
 
 script:
@@ -13,4 +13,4 @@ script:
 
 after_failure:
   cat /home/travis/build/grewe/HelloWorld_CS401_Gradle/build/reports/tests/test/index.html &&
-  ssmtp lynne.grewe@csueastbay.edu < /home/travis/build/grewe/HelloWorld_CS401_Gradle/build/reports/tests/test/index.html
+  sendmail lynne.grewe@csueastbay.edu < /home/travis/build/grewe/HelloWorld_CS401_Gradle/build/reports/tests/test/index.html
