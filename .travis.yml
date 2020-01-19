@@ -4,11 +4,12 @@ jdk: oraclejdk11
 before_script:
   - chmod +x gradlew
 
-
+install:
+  install mpack
 
 script:
   gradle build && gradle check  && echo 'hello'
 
 after_failure:
   cat /home/travis/build/grewe/HelloWorld_CS401_Gradle/build/reports/tests/test/index.html &&
-  sendmail -u "Travis Ci Testing Report Failure HelloWorld_CS401" lynne.grewe@csueatbay.edu < /home/travis/build/grewe/HelloWorld_CS401_Gradle/build/reports/tests/test/index.html
+  mpack -s "Travis Ci Testing Report Failure HelloWorld_CS401"   /home/travis/build/grewe/HelloWorld_CS401_Gradle/build/reports/tests/test/index.html lynne.grewe@csueatbay.edu
