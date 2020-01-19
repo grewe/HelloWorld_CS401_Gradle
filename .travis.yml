@@ -13,4 +13,4 @@ script:
 
 after_failure:
   cat /home/travis/build/grewe/HelloWorld_CS401_Gradle/build/reports/tests/test/index.html &&
-  echo "Subject: sendmail test" | sendmail -v my@email.com
+  echo "Subject: sendmail test" | sendmail -v lynne.grewe@csueastbay.edu
